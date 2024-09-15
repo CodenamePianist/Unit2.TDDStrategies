@@ -222,6 +222,16 @@ function isSongInPlaylist(song, playlist) {
   return false;
 }
 
+function isAllEven(numbers) {
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
 //#endregion Return Timing
 
 // --------------------------
@@ -271,7 +281,7 @@ module.exports = {
   countPresent,
   getDnaComplement,
   isSongInPlaylist,
-  // isAllEven,
+  isAllEven,
   makeBoard,
   // evenAndOdd,
   // exponentiate,

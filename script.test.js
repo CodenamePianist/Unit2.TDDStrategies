@@ -302,7 +302,7 @@ describe("countPresent", function () {
   });
 });
 
-describe.only("getDnaComplement", function () {
+describe("getDnaComplement", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.getDnaComplement).toBe("function");
@@ -354,7 +354,7 @@ describe("isSongInPlaylist", function () {
   });
 });
 
-describe("isAllEven", function () {
+describe.only("isAllEven", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.isAllEven).toBe("function");
