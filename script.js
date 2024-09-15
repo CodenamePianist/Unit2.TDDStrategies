@@ -145,7 +145,7 @@ function findMax(nums) {
 function findLongestString(a) {
   let longestString = "";
   if (a.length === 0) {
-    return ""
+    return "";
   } else {
     for (let i = 0; i < a.length; i++) {
       if (a[i].length > longestString.length) {
@@ -173,6 +173,32 @@ function countPresent(student) {
       }
     }
     return studentsPresent;
+  }
+}
+
+/**
+ * 
+ * @param {string} strand 
+ * @returns The complementary DNA strand of the input.
+ * But if the input is an empty string, then the function will return an empty string.
+ */
+function getDnaComplement(strand) {
+  let complement = "";
+  if (strand.length === 0) {
+    return "";
+  } else {
+    for (let i = 0; i < strand.length; i++) {
+      if (strand[i] === "A") {
+        complement += "T";
+      } else if (strand[i] === "T") {
+        complement += "A";
+      } else if (strand[i] === "G") {
+        complement += "C";
+      } else if (strand[i] === "C") {
+        complement += "G";
+      }
+    }
+    return complement;
   }
 }
 
@@ -243,7 +269,7 @@ module.exports = {
   findMax,
   findLongestString,
   countPresent,
-  // getDnaComplement,
+  getDnaComplement,
   isSongInPlaylist,
   // isAllEven,
   makeBoard,

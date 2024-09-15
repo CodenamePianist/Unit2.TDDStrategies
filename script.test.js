@@ -274,7 +274,7 @@ describe("findLongestString", function () {
   });
 });
 
-describe.only("countPresent", function () {
+describe("countPresent", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.countPresent).toBe("function");
@@ -302,7 +302,7 @@ describe.only("countPresent", function () {
   });
 });
 
-describe("getDnaComplement", function () {
+describe.only("getDnaComplement", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.getDnaComplement).toBe("function");
