@@ -14,7 +14,7 @@ function generateRandomNumberArray(low = -50, high = 50, n = 5) {
 }
 //#endregion Setup
 
-describe.only("multiplyNumbers", function () {
+describe("multiplyNumbers", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.multiplyNumbers).toBe("function");
@@ -220,7 +220,7 @@ describe("buildNArray", function () {
 describe("findMax", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
-      expect(typeof code.findMax).toBe("number");
+      expect(typeof code.findMax).toBe("function");
     });
     it("returns a number", function () {
       const result = code.findMax([1, 2]);
@@ -246,7 +246,7 @@ describe("findMax", function () {
   });
 });
 
-describe("findLongestString", function () {
+describe.only("findLongestString", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.findLongestString).toBe("function");

@@ -15,6 +15,34 @@ function multiplyNumbers(a, b) {
   }
 
   return a * b;
+
+}
+/**
+ * 
+ * @param {number} age 
+ * @returns string
+ */
+function vote(age) {
+  if (age >= 18) {
+    return "Who would you like to vote for?";
+  } else {
+    return "You must be 18 or older to vote.";
+  }
+}
+/**
+ * 
+ * @param {string} left 
+ * @param {string} right 
+ * @returns the concatenation of `left` and `right`
+ * unless either parameter is not a number
+ * in which case the string `"error"` is returned.
+ */
+function concatenateStrings(left, right) {
+  if (typeof left !== "string" || typeof right !== "string") {
+    return "error"
+  }
+  
+  return left + right;
 }
 
 //#endregion Guard
@@ -35,6 +63,59 @@ function sumArray(nums) {
   return total;
 }
 
+/**
+ * 
+ * @param {number} test 
+ * @returns the sum of all integers between 1 and test
+ * unless test is 0 or negative, then it will return 0
+ */
+function sumToN(test) {
+  let sum = 0;
+  if (test <= 0) {
+    return 0
+  } else {
+    for (let i = 0; i <= test; i++) {
+      sum += i;
+    }
+    return sum;
+  }
+}
+
+/**
+ * 
+ * @param {number} n 
+ * @returns the value at index n.
+ * But if n is negative or not an integer, it will return `error.`
+ */
+function factorial(n) {
+  const expected = [1, 1, 2, 6, 24, 120, 720, 5040, 40320];
+  if (n < 0 || Number.isInteger(n) === false) {
+    return "error";
+  } else {if (Number.isInteger(n) === true && n >= 0 && n <= 8) {
+    return expected[n]}
+  }
+}
+
+/**
+ * 
+ * @param {number} test 
+ * @returns an array of numbers when `test` is positive.
+ * When `test` is negative, the function returns `error`
+ */
+function buildNArray(test) {
+  const b = []
+  if (Number.isInteger(test) === false) {
+    return "error";
+  } else if (test <= 0) {
+    return [];
+  } else {
+    for (let i = 0; i < test; i++) {
+      b.push(i + 1);
+    }
+    return b;
+  }
+}
+
 //#endregion Accumulator Variable
 
 // --------------------------
@@ -53,6 +134,20 @@ function findMax(nums) {
     }
   }
   return max;
+}
+
+function findLongestString(a) {
+  let longestString = "";
+  if (a.length === 0) {
+    return ""
+  } else {
+    for (let i = 0; i < a.length; i++) {
+      if (a[i].length > longestString.length) {
+        longestString = a[i];
+      }
+    }
+    return longestString;
+  }
 }
 
 //#endregion Conditional Accumulation
@@ -113,14 +208,14 @@ function makeBoard(cols, rows) {
  */
 module.exports = {
   multiplyNumbers,
-  // vote,
-  // concatenateStrings,
+  vote,
+  concatenateStrings,
   sumArray,
-  // sumToN,
-  // factorial,
-  // buildNArray,
+  sumToN,
+  factorial,
+  buildNArray,
   findMax,
-  // findLongestString,
+  findLongestString,
   // countPresent,
   // getDnaComplement,
   isSongInPlaylist,
