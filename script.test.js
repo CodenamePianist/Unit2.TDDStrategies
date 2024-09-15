@@ -246,7 +246,7 @@ describe("findMax", function () {
   });
 });
 
-describe.only("findLongestString", function () {
+describe("findLongestString", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.findLongestString).toBe("function");
@@ -274,7 +274,7 @@ describe.only("findLongestString", function () {
   });
 });
 
-describe("countPresent", function () {
+describe.only("countPresent", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.countPresent).toBe("function");

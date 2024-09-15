@@ -136,6 +136,12 @@ function findMax(nums) {
   return max;
 }
 
+/**
+ * 
+ * @param {string[]} a 
+ * @returns the longest string in the array.
+ * Unless a.length is 0 then it returns an empty string.
+ */
 function findLongestString(a) {
   let longestString = "";
   if (a.length === 0) {
@@ -147,6 +153,26 @@ function findLongestString(a) {
       }
     }
     return longestString;
+  }
+}
+
+/**
+ * 
+ * @param {int[]} student 
+ * @returns the number of students in the given array that were present.
+ * But if student.length is 0, it will return 0
+ */
+function countPresent(student) {
+  let studentsPresent = 0;
+  if (student.length === 0) {
+    return 0
+  } else {
+    for (let i = 0; i < student.length; i++) {
+      if (student[i] === true) {
+        studentsPresent += 1;
+      }
+    }
+    return studentsPresent;
   }
 }
 
@@ -216,7 +242,7 @@ module.exports = {
   buildNArray,
   findMax,
   findLongestString,
-  // countPresent,
+  countPresent,
   // getDnaComplement,
   isSongInPlaylist,
   // isAllEven,
