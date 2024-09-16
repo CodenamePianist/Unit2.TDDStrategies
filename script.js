@@ -343,6 +343,12 @@ function bacteriaTime(current, target) {
   return minutes;
 }
 
+/**
+ * 
+ * @param {int[]} numbers 
+ * @returns the average of the numbers in the given array.
+ * If an empty array is given, then 0 is returned.
+ */
 function getAverage(numbers) {
   let sum = 0;
   if (numbers.length === 0) {
@@ -355,6 +361,12 @@ function getAverage(numbers) {
   return sum / numbers.length;
 }
 
+/**
+ * 
+ * @param {string[]} coins 
+ * @returns the sum of the coins in the given array.
+ * If an empty array is given, then 0 is returned.
+ */
 function countCoins(coins) {
   let total = 0;
   if (coins.length === 0) {
@@ -373,6 +385,26 @@ function countCoins(coins) {
     }
     return total;
   }
+}
+
+function getPairs(number) {
+  const pairs = [];
+  if (number <= 0) {
+    return "error";
+  }
+  if (Number.isInteger(number) === false) {
+    return "error";
+  }
+  if (typeof number !== "number") {
+    return "error";
+  }
+
+  for (let i = 1; i <= number; i++) {
+    for (let j = i; j <= number; j++) {
+      pairs.push([i, j]);
+    }
+  }
+  return pairs;
 }
 
 //#endregion Practice
@@ -403,5 +435,5 @@ module.exports = {
   bacteriaTime,
   getAverage,
   countCoins,
-  // getPairs,
+  getPairs,
 };

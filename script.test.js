@@ -547,7 +547,7 @@ describe("getAverage", function () {
   });
 });
 
-describe.only("countCoins", function () {
+describe("countCoins", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.countCoins).toBe("function");
@@ -568,7 +568,7 @@ describe.only("countCoins", function () {
   });
 });
 
-describe("getPairs", function () {
+describe.only("getPairs", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.getPairs).toBe("function");
