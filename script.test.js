@@ -403,7 +403,7 @@ describe("makeBoard", function () {
   });
 });
 
-describe.only("evenAndOdd", function () {
+describe("evenAndOdd", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.evenAndOdd).toBe("function");
@@ -431,7 +431,7 @@ describe.only("evenAndOdd", function () {
   });
 });
 
-describe("exponentiate", function () {
+describe.only("exponentiate", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.exponentiate).toBe("function");

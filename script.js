@@ -261,6 +261,12 @@ function makeBoard(cols, rows) {
   return board;
 }
 
+/**
+ * 
+ * @param {int[]} numbers 
+ * @returns a 2D array where the first array is the even numbers of the input function
+ * and second array is the odd numbers of the input function.
+ */
 function evenAndOdd(numbers) {
   const newArray = [];
   for (let i = 0; i < 2; i++) {
@@ -281,6 +287,14 @@ function evenAndOdd(numbers) {
 // --------------------------
 //#region Practice
 // --------------------------
+
+function exponentiate(b, p) {
+  if (Number.isInteger(b) === false || Number.isInteger(p) === false) {
+    return "error";
+  } else {
+    return Math.pow(b, p);
+  }
+}
 
 //#endregion Practice
 
@@ -305,7 +319,7 @@ module.exports = {
   isAllEven,
   makeBoard,
   evenAndOdd,
-  // exponentiate,
+  exponentiate,
   // onlyOdds,
   // bacteriaTime,
   // getAverage,
