@@ -354,7 +354,7 @@ describe("isSongInPlaylist", function () {
   });
 });
 
-describe.only("isAllEven", function () {
+describe("isAllEven", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.isAllEven).toBe("function");
@@ -403,7 +403,7 @@ describe("makeBoard", function () {
   });
 });
 
-describe("evenAndOdd", function () {
+describe.only("evenAndOdd", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.evenAndOdd).toBe("function");

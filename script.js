@@ -222,6 +222,12 @@ function isSongInPlaylist(song, playlist) {
   return false;
 }
 
+/**
+ * 
+ * @param {int[]} numbers 
+ * @returns true if all numbers in the array are even.
+ * Otherwise it wil return false.
+ */
 function isAllEven(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 === 0) {
@@ -255,6 +261,21 @@ function makeBoard(cols, rows) {
   return board;
 }
 
+function evenAndOdd(numbers) {
+  const newArray = [];
+  for (let i = 0; i < 2; i++) {
+    newArray[i] = [];
+    for (let j = 0; j < numbers.length; j++) {
+      if (numbers[j] % 2 === 0 && i === 0) {
+        newArray[i].push(numbers[j]);
+      } else if (numbers[j] % 2 != 0 && i === 1) {
+        newArray[i].push(numbers[j]);
+      }
+    }
+  }
+  return newArray;
+}
+
 //#endregion Nested Loops and Arrays
 
 // --------------------------
@@ -283,7 +304,7 @@ module.exports = {
   isSongInPlaylist,
   isAllEven,
   makeBoard,
-  // evenAndOdd,
+  evenAndOdd,
   // exponentiate,
   // onlyOdds,
   // bacteriaTime,
