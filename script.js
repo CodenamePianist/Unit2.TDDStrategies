@@ -323,6 +323,26 @@ function onlyOdds(number) {
   }
 }
 
+/**
+ * 
+ * @param {int} current 
+ * @param {int} target 
+ * @returns returns the number of minutes it takes for current to grow to/past target.
+ * If current is greater than target, a string will be returned `target must be larger than current.`
+ */
+function bacteriaTime(current, target) {
+  let minutes = 0
+  if (current > target) {
+    return `target must be larger than current`;
+  }
+
+  while (current < target) {
+    minutes += 20;
+    current *= 2;
+  }
+  return minutes;
+}
+
 //#endregion Practice
 
 /**
@@ -348,7 +368,7 @@ module.exports = {
   evenAndOdd,
   exponentiate,
   onlyOdds,
-  // bacteriaTime,
+  bacteriaTime,
   // getAverage,
   // countCoins,
   // getPairs,

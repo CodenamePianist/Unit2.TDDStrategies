@@ -464,7 +464,7 @@ describe("exponentiate", function () {
   });
 });
 
-describe.only("onlyOdds", function () {
+describe("onlyOdds", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.onlyOdds).toBe("function");
@@ -492,7 +492,7 @@ describe.only("onlyOdds", function () {
   });
 });
 
-describe("bacteriaTime", function () {
+describe.only("bacteriaTime", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.bacteriaTime).toBe("function");
