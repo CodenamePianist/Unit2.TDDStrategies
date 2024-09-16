@@ -355,6 +355,26 @@ function getAverage(numbers) {
   return sum / numbers.length;
 }
 
+function countCoins(coins) {
+  let total = 0;
+  if (coins.length === 0) {
+    return 0
+  } else {
+    for (let i = 0; i < coins.length; i++) {
+      if (coins[i] === "P") {
+        total += 1;
+      } else if (coins[i] === "N") {
+        total += 5;
+      } else if (coins[i] === "D") {
+        total += 10;
+      } else if (coins[i] === "Q") {
+        total += 25;
+      }
+    }
+    return total;
+  }
+}
+
 //#endregion Practice
 
 /**
@@ -382,6 +402,6 @@ module.exports = {
   onlyOdds,
   bacteriaTime,
   getAverage,
-  // countCoins,
+  countCoins,
   // getPairs,
 };

@@ -521,7 +521,7 @@ describe("bacteriaTime", function () {
   });
 });
 
-describe.only("getAverage", function () {
+describe("getAverage", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.getAverage).toBe("function");
@@ -547,7 +547,7 @@ describe.only("getAverage", function () {
   });
 });
 
-describe("countCoins", function () {
+describe.only("countCoins", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.countCoins).toBe("function");
