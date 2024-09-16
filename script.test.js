@@ -492,7 +492,7 @@ describe("onlyOdds", function () {
   });
 });
 
-describe.only("bacteriaTime", function () {
+describe("bacteriaTime", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.bacteriaTime).toBe("function");
@@ -521,7 +521,7 @@ describe.only("bacteriaTime", function () {
   });
 });
 
-describe("getAverage", function () {
+describe.only("getAverage", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.getAverage).toBe("function");

@@ -343,6 +343,18 @@ function bacteriaTime(current, target) {
   return minutes;
 }
 
+function getAverage(numbers) {
+  let sum = 0;
+  if (numbers.length === 0) {
+    return null
+  }
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum / numbers.length;
+}
+
 //#endregion Practice
 
 /**
@@ -369,7 +381,7 @@ module.exports = {
   exponentiate,
   onlyOdds,
   bacteriaTime,
-  // getAverage,
+  getAverage,
   // countCoins,
   // getPairs,
 };
