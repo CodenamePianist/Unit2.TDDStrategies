@@ -288,11 +288,38 @@ function evenAndOdd(numbers) {
 //#region Practice
 // --------------------------
 
+/**
+ * 
+ * @param {num} b 
+ * @param {num} p 
+ * @returns If one of the two inputs is not an integer, it will return an error.
+ * Otherwise it will return the first number raised to the power of the second.
+ */
 function exponentiate(b, p) {
   if (Number.isInteger(b) === false || Number.isInteger(p) === false) {
     return "error";
   } else {
     return Math.pow(b, p);
+  }
+}
+
+/**
+ * 
+ * @param {number} number 
+ * @returns the sum of all odd numbers between 1 and the given number.
+ * If the given number is less than 1, return 0.
+ */
+function onlyOdds(number) {
+  let sum = 0
+  if (number < 1) {
+    return 0
+  } else {
+    for (let i = 0; i <= number; i++) {
+      if (i % 2 != 0) {
+        sum += i;
+      }
+    }
+    return sum;
   }
 }
 
@@ -320,7 +347,7 @@ module.exports = {
   makeBoard,
   evenAndOdd,
   exponentiate,
-  // onlyOdds,
+  onlyOdds,
   // bacteriaTime,
   // getAverage,
   // countCoins,

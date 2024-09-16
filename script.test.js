@@ -431,7 +431,7 @@ describe("evenAndOdd", function () {
   });
 });
 
-describe.only("exponentiate", function () {
+describe("exponentiate", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.exponentiate).toBe("function");
@@ -464,7 +464,7 @@ describe.only("exponentiate", function () {
   });
 });
 
-describe("onlyOdds", function () {
+describe.only("onlyOdds", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.onlyOdds).toBe("function");
